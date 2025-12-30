@@ -14,7 +14,7 @@ $(function (){
 
   toggleBtn.click(() => {
     console.log("Hamburger icon clicked");
-    dropdownMenu.toggleClass("open")
+    dropdownMenu.toggleClass("open");
   })
 });
 

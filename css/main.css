@@ -91,11 +91,12 @@
 }
 
 @layer utilities {
+
   /* partner logos */
   .logo-ticket-image {
     @apply w-auto h-6 lg:h-9;
   }
-}
+
   /* Products */
   .tabContainer {
     @apply flex flex-col w-full gap-8 md:flex-row md:gap-16;
@@ -137,3 +138,25 @@
     @apply text-p-900;
   }
 
+ /* Features */
+
+ .feature-card {
+  @apply h-[400px] w-[368px] flex flex-col items-center justify-center p-[36px] gap-[36px]
+  [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] transition-all duration-500
+  bg-center bg-no-repeat bg-cover;
+ }
+
+ #features h3 {
+   @apply relative z-0 text-xl font-semibold tracking-widest text-white uppercase
+   transition-all duration-500 translate-y-16 group-hover:translate-y-4
+ }
+
+ #features p {
+  @apply relative z-0 text-center text-white transition-all duration-500 translate-y-full opacity-0
+  group-hover:translate-y-0 group-hover:opacity-100
+ }
+
+ .feature-filter {
+  @apply absolute inset-0 transition-all duration-500 opacity-50 bg-p-700 group-hover:opacity-80 group-hover:bg-p-900 -z-10
+ }
+}

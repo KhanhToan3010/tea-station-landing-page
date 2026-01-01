@@ -30,6 +30,7 @@
     src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"
   ></script>
   <script src="./js/animated-counter-prograssbar.js" defer></script>
+  <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js" defer>	</script>
    <script defer type="module" src="./js/main.js"></script>
 </head>
 <body>
@@ -782,8 +783,34 @@
          </div>
       </div>
     </section>
+
+     <!----------------
+         Stats Section
+    ----------------->
+    <section id="stats" class="relative mt-20 bg-fixed bd-no-repeat bg-center bg-cover 
+     bg-[url(/assets/statsBg.jpg)]"
+    >
+      <!-- overlay -->
+       <div class="absolute inset-0 bg-p-950/95"></div>
+
+      <!-- content -->
+       <div class="container relative z-10 flex flex-col items-center justify-center px-4 py-20 lg:py-28 gap-14 lg:gap-32 md:flex-row">
+            <div class="stats-item">
+              <h1 class="counter">100+</h1>
+              <h2>Hương Vị Pha Chế</h2>
+            </div>
+            <div class="stats-item">
+              <h1 class="counter">500k+</h1>
+              <h2>Sản Phẩm Bán Ra Toàn Thế Giới</h2>
+            </div>
+            <div class="stats-item">
+              <h1 class="counter">4.9+</h1>
+              <h2>Điểm Đánh Giá Từ Khách Hàng</h2>
+            </div>
+       </div>
+    </section>
+
+
     <div class="h-screen"></div>
-
-
 </body>
 </html>

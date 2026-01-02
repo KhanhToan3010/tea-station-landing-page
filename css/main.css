@@ -76,7 +76,7 @@
   }
   /* Hero */
   .btn {
-    @apply flex items-center justify-center gap-2 px-4 py-2 text-sm tracking-wider text-white transition-colors duration-500 bg-p-950 hover:bg-p-700 border-p-900 font-inter lg:py-3 lg:px-9;
+    @apply flex items-center justify-center gap-2 px-4 py-2 text-sm tracking-wider text-white transition-colors duration-300 bg-p-950 hover:bg-p-700 border-p-900 font-inter lg:py-3 lg:px-9;
   }
   .text-gradient {
     background: linear-gradient(to right, theme('colors.p.600'), theme('colors.p.900'));
@@ -207,6 +207,21 @@
 
     h2{
       @apply mt-2 text-xs text-center lg:text-base text-white/50
+    }
+  }
+
+  /* Contact */
+  .contact-info {
+    @apply w-full;
+
+    > div {
+      @apply flex items-center gap-2 px-2 py-2 bg-p-600
+    }
+    h1 {
+      @apply text-white capitalize
+    }
+    p{
+      @apply mt-2 text-base
     }
   }
 }

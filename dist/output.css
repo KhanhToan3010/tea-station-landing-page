@@ -216,14 +216,23 @@
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
+  .-right-20 {
+    right: calc(var(--spacing) * -20);
+  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
   .right-1\/2 {
     right: calc(1/2 * 100%);
   }
+  .-bottom-20 {
+    bottom: calc(var(--spacing) * -20);
+  }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
+  }
+  .left-4 {
+    left: calc(var(--spacing) * 4);
   }
   .-z-10 {
     z-index: calc(10 * -1);
@@ -279,6 +288,12 @@
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
   .mt-9 {
     margin-top: calc(var(--spacing) * 9);
   }
@@ -306,12 +321,22 @@
   .hidden {
     display: none;
   }
+  .size-4 {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+  }
   .size-5 {
     width: calc(var(--spacing) * 5);
     height: calc(var(--spacing) * 5);
   }
   .h-\[30vh\] {
     height: 30vh;
+  }
+  .h-\[515px\] {
+    height: 515px;
+  }
+  .h-auto {
+    height: auto;
   }
   .h-full {
     height: 100%;
@@ -330,6 +355,12 @@
   }
   .w-16 {
     width: calc(var(--spacing) * 16);
+  }
+  .w-\[250px\] {
+    width: 250px;
+  }
+  .w-\[400px\] {
+    width: 400px;
   }
   .w-full {
     width: 100%;
@@ -405,6 +436,9 @@
   .gap-9 {
     gap: calc(var(--spacing) * 9);
   }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
   .gap-14 {
     gap: calc(var(--spacing) * 14);
   }
@@ -417,8 +451,28 @@
   .overflow-y-clip {
     overflow-y: clip;
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-dotted {
+    --tw-border-style: dotted;
+    border-style: dotted;
+  }
+  .\!border-p-600 {
+    border-color: hsl(150, 74%, 30%) !important;
+  }
+  .border-p-600 {
+    border-color: hsl(150, 74%, 30%);
+  }
+  .\!bg-p-600 {
+    background-color: hsl(150, 74%, 30%) !important;
+  }
   .bg-p-50 {
     background-color: hsl(150, 66%, 96%);
+  }
+  .bg-p-950 {
+    background-color: hsl(160, 73%, 9%);
   }
   .bg-p-950\/60 {
     background-color: color-mix(in oklab, hsl(160, 73%, 9%) 60%, transparent);
@@ -479,6 +533,15 @@
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+  }
+  .px-12 {
+    padding-inline: calc(var(--spacing) * 12);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
@@ -572,11 +635,20 @@
   .text-white {
     color: var(--color-white);
   }
+  .text-white\/50 {
+    color: color-mix(in srgb, #fff 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-white) 50%, transparent);
+    }
+  }
   .capitalize {
     text-transform: capitalize;
   }
   .uppercase {
     text-transform: uppercase;
+  }
+  .opacity-15 {
+    opacity: 15%;
   }
   .opacity-20 {
     opacity: 20%;
@@ -588,6 +660,13 @@
   }
   .text-shadow-\[2px_2px_8px_\#000000\] {
     text-shadow: 2px 2px 8px var(--tw-text-shadow-color, #000000);
+  }
+  .hover\:\!bg-p-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: hsl(150, 75%, 24%) !important;
+      }
+    }
   }
   .md\:top-\[-20\%\] {
     @media (width >= 48rem) {
@@ -607,6 +686,26 @@
   .md\:block {
     @media (width >= 48rem) {
       display: block;
+    }
+  }
+  .md\:h-\[84px\] {
+    @media (width >= 48rem) {
+      height: 84px;
+    }
+  }
+  .md\:h-\[112px\] {
+    @media (width >= 48rem) {
+      height: 112px;
+    }
+  }
+  .md\:h-\[1124px\] {
+    @media (width >= 48rem) {
+      height: 1124px;
+    }
+  }
+  .md\:w-\[350px\] {
+    @media (width >= 48rem) {
+      width: 350px;
     }
   }
   .md\:translate-x-1\/2 {
@@ -711,6 +810,31 @@
   .lg\:hidden {
     @media (width >= 80rem) {
       display: none;
+    }
+  }
+  .lg\:h-\[84px\] {
+    @media (width >= 80rem) {
+      height: 84px;
+    }
+  }
+  .lg\:h-\[88px\] {
+    @media (width >= 80rem) {
+      height: 88px;
+    }
+  }
+  .lg\:h-\[112px\] {
+    @media (width >= 80rem) {
+      height: 112px;
+    }
+  }
+  .lg\:h-\[114px\] {
+    @media (width >= 80rem) {
+      height: 114px;
+    }
+  }
+  .lg\:h-\[118px\] {
+    @media (width >= 80rem) {
+      height: 118px;
     }
   }
   .lg\:w-2\/3 {
@@ -932,8 +1056,8 @@
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
-    --tw-duration: 500ms;
-    transition-duration: 500ms;
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
     &:hover {
       @media (hover: hover) {
         background-color: hsl(150, 75%, 24%);
@@ -1253,6 +1377,26 @@
       }
     }
   }
+  .contact-info {
+    width: 100%;
+    > div {
+      display: flex;
+      align-items: center;
+      gap: calc(var(--spacing) * 2);
+      background-color: hsl(150, 74%, 30%);
+      padding-inline: calc(var(--spacing) * 2);
+      padding-block: calc(var(--spacing) * 2);
+    }
+    h1 {
+      color: var(--color-white);
+      text-transform: capitalize;
+    }
+    p {
+      margin-top: calc(var(--spacing) * 2);
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
+    }
+  }
 }
 @property --tw-translate-x {
   syntax: "*";
@@ -1288,6 +1432,11 @@
 @property --tw-skew-y {
   syntax: "*";
   inherits: false;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-gradient-position {
   syntax: "*";
@@ -1352,11 +1501,6 @@
   inherits: false;
   initial-value: 100%;
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-backdrop-blur {
   syntax: "*";
   inherits: false;
@@ -1412,6 +1556,7 @@
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
+      --tw-border-style: solid;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
       --tw-gradient-via: #0000;
@@ -1426,7 +1571,6 @@
       --tw-tracking: initial;
       --tw-text-shadow-color: initial;
       --tw-text-shadow-alpha: 100%;
-      --tw-border-style: solid;
       --tw-backdrop-blur: initial;
       --tw-backdrop-brightness: initial;
       --tw-backdrop-contrast: initial;

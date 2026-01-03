@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tea Station</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" >
+
+  <!-- CSS -->
+   <link type="text/css" rel="stylesheet" href="./css/showHideNav.css" />
+   <link type="text/css" rel="stylesheet" href="css/responsive-tabs.css" />
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+   <link type="text/css" rel="stylesheet" href="./css/animated-counter-prograssbar.css" />
+   <link href="./dist/output.css" rel="stylesheet">
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&display=swap" rel="stylesheet">
+
+  <!-- Jquery -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <!-- Scripts -->
+  <script src="./js/jquery.hidescroll.js" defer></script>
+  <script src="./js/jquery.responsiveTabs.js" defer></script>
+  <script 
+    defer
+    type="text/javascript" 
+    src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"
+  ></script>
+  <script src="./js/animated-counter-prograssbar.js" defer></script>
+  <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js" defer>	</script>
+  <!-- <script src="./js/jquery.filterjitsu.min.js" defer></script> -->
+  <script src="./js/jquery.filterjitsu.js" defer></script>
+  <script defer type="module" src="./js/main.js"></script>
+</head>
+<body>
+   <!----------------
+         Navigation
+    ----------------->
+    <header class="relative z-50">
+      <div class="flex items-center justify-center navbar">
+        <div class="max-w-[1536px] w-full px-4 py-4 md:py-10 md:px-[72px] flex items-center
+        justify-between">
+        <!-- Logo -->
+          <a href="./" class="flex items-center justify-center flex-none">
+            <img src="./assets/logo.png" class="w-16 h16" alt="logo"/>
+            <p class="text-lg capitalize font-lobster text-p-900">Tea Station</p>
+          </a>
+        <!-- Nav Links -->
+         <nav class="items-center justify-end hidden w-full gap-4 lg:flex lg:gap-8">
+          <a 
+            href="./products.html" 
+            class="navLink"
+            >Sản Phẩm
+          </a>
+          <a 
+            href="./#story" 
+            class="navLink"
+            >Giới Thiệu
+          </a>
+          <a 
+            href="./#contact" 
+            class="navLink"
+            >Liên Hệ
+          </a>
+         </nav>
+        <!-- Hamberger Menu -->
+         <div class="block cursor-pointer lg:hidden">
+          <img href="./" src="./assets/Menu Icon.svg" alt="hamburger icon" class="size-5" id="toggle_btn">
+         </div>
+        <!-- Mobile Menu -->
+         <div class="dropdown-menu lg:hidden">
+          <a href="./products.html" class="navLink mobileNavLink">Sản Phẩm</a>
+          <a href="./#story" class="navLink mobileNavLink">Giới Thiệu</a>
+          <a href="./#contact" class="navLink mobileNavLink">Liên Hệ</a>
+         </div>
+      </div>
+      </div>
+    </header>
+  <!----------------
+         All Products
+    ----------------->
+    <section id="products">
+      <main class="container mt-20">
+        <!-- Banner -->
+         <img src="./assets/banners/banner1.jpg" alt="products banner"
+          class="w-full h-[350px] object-cover shadow-xl"
+         />
+        <!-- Heading -->
+         <div class="mt-4 md:mt-9">
+          <div>
+            <h2 class="sub_heading">Shop with us</h2>
+            <h1 class="main_heading">Tất cả sản phẩm</h1>
+          </div>
+          <p class="max-w-lg mt-2 text-xs text-n-500">
+            Cho dù bạn là người đam mê trà lâu năm hay mới bước chân vào thế giới trà, 
+            chúng tôi ở đây để giúp bạn khám phá loại trà pha trộn yêu thích tiếp theo của mình.
+            Khám phá bộ sưu tập của chúng tôi và trải nghiệm nghệ thuật pha trà trong từng ngụm.
+          </p>
+         </div>
+
+        <!-- Filter tabs -->
+         <div id="allProducts-filters" class="flex gap-8 mt-4 md:mt-9">
+          <a 
+            id="f-all" 
+            href="?"
+            >Tất cả <span class="hidden md:inline">sản phẩm</span>
+          </a>
+
+          <a 
+          id="f-blacktea" 
+          href="?filter-category=blacktea"
+          ><span class="hidden md:inline">Trà</span> Đen
+          </a>
+
+          <a 
+          id="f-whitetea" 
+          href="?filter-category=whitetea"
+          ><span class="hidden md:inline">Trà</span> Trắng
+          </a>
+
+          <a 
+          id="f-oolong" 
+          href="?filter-category=oolong"
+          ><span class="hidden md:inline">Trà</span> Ô Long
+          </a>
+
+          <a 
+          id="f-matcha" 
+          href="?filter-category=matcha"
+          ><span class="hidden md:inline">Trà</span> Matcha
+          </a>
+         </div>
+
+        <!-- Products Grid -->
+         <section id="product-wrapper">
+          <div class="mt-9">
+            <div id="product-item--container" class="grid grid-cols-3 gap-4 md:grid-cols-6 lg:grid-cols-12">
+              <!-- Products items added by JS -->
+            </div>
+          </div>
+         </section>
+
+      </main>
+    </section>
+    <!----------------
+         Footer
+    ----------------->
+    <footer class="bg-p-950 h-auto md:h-[112px] lg:h-[112px]">
+      <div class="container flex items-center justify-center h-full text-white/50">
+        <p class="mt-4 text-center"> © Tea Station's Copyright 2025</p>
+      </div>
+    </footer>
+</body>
+</html>

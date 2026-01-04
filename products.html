@@ -12,6 +12,7 @@
    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
    <link type="text/css" rel="stylesheet" href="./css/animated-counter-prograssbar.css" />
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <link href="./dist/output.css" rel="stylesheet">
 
   <!-- FONT -->
@@ -33,6 +34,7 @@
   <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js" defer>	</script>
   <!-- <script src="./js/jquery.filterjitsu.min.js" defer></script> -->
   <script src="./js/jquery.filterjitsu.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   <script defer type="module" src="./js/main.js"></script>
 </head>
 <body>
@@ -85,16 +87,18 @@
     <section id="products">
       <main class="container mt-20">
         <!-- Banner -->
-         <img src="./assets/banners/banner1.jpg" alt="products banner"
+         <img 
+          data-aos="flip-up"
+          src="./assets/banners/banner1.jpg" alt="products banner"
           class="w-full h-[350px] object-cover shadow-xl"
          />
         <!-- Heading -->
          <div class="mt-4 md:mt-9">
-          <div>
+          <div data-aos="fade-right">
             <h2 class="sub_heading">Shop with us</h2>
             <h1 class="main_heading">Tất cả sản phẩm</h1>
           </div>
-          <p class="max-w-lg mt-2 text-xs text-n-500">
+          <p  data-aos="fade-right" data-aos-delay="100" class="max-w-lg mt-2 text-xs text-n-500">
             Cho dù bạn là người đam mê trà lâu năm hay mới bước chân vào thế giới trà, 
             chúng tôi ở đây để giúp bạn khám phá loại trà pha trộn yêu thích tiếp theo của mình.
             Khám phá bộ sưu tập của chúng tôi và trải nghiệm nghệ thuật pha trà trong từng ngụm.

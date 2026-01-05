@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "tailwindcss -i ./css/main.css -o ./dist/output.css",
+    "build": "  tailwindcss -i ./css/main.css -o ./dist/output.css && cp -R js assets dist/",
+  
     "dev": "tailwindcss -i ./css/main.css -o ./dist/output.css --watch"
   },
   "dependencies": {

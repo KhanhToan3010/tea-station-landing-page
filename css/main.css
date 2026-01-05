@@ -1,5 +1,12 @@
+
+@import "./showHideNav.css";
+@import "./responsive-tabs.css";
+@import "./animated-counter-prograssbar.css";
+@import "./logo-animation.css"; 
+
 @import "tailwindcss";
 @config "../tailwind.config.js";
+
 
 /** Theme **/
 @theme {
